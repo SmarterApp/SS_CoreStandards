@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CSR>
+	<Publisher Key="DE" Name="Delaware" />
+	
+	<Publisher Key="HI" Name="Hawaii">
+		<Publication Key="AIR-ELA-v1" Description="AIR Canonical Set of Standards" SubjectName="English Language Arts" SubjectKey="ELA" Version="1" DateChanged="2011-08-26 19:14:54.583">
+			<StandardCategories>
+				<Category Name="Strand" TreeLevel="1" />
+				<Category Name="Benchmark" TreeLevel="2" />
+				<Category Name="Indicator" TreeLevel="3" />
+			</StandardCategories>
+			<Standards>
+				<Standard Key="AIR-ELA-v1:100" PubKey="100" ParentKey="" Name="100" Description="Phonemic Awareness" TreeLevel="1" ShortName="" GradeLevel=""/>
+				<Standard Key="AIR-ELA-v1:100|101" PubKey="100|101" ParentKey="AIR-ELA-v1:100" Name="101" Description="Isolate Phonemes" TreeLevel="2" ShortName="" GradeLevel=""/>
+				<Standard Key="AIR-ELA-v1:100|101|101.01" PubKey="100|101|101.01" ParentKey="AIR-ELA-v1:100" Name="101.01" Description="Tell if words and sounds are same or different" TreeLevel="3" ShortName="" GradeLevel=""/>
+			</Standards>
+			<SOCKs>
+				<SOCK Name="" Description="" />
+			</SOCKs>
+			<StandardGrades>
+				<StandardGrade Key="" GradeLevel="" />
+			</StandardGrades>
+			<StandardRelationships>
+				<StandardRelationship AKey="" BKey="" Type="" />
+			</StandardRelationships>
+		</Publication>
+	</Publisher>
+	
+	<Subject Key="" Name="" Code="" Description="" />
+	<Subject Key="" Name="" Code="" Description="" />
+	
+	<Grade Key="" Name="" />
+	<Grade Key="" Name="" />
+</CSR>

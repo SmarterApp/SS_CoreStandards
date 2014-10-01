@@ -1,0 +1,258 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import "http://weloveiconfonts.com/api/?family=entypo";
+@import "http://weloveiconfonts.com/api/?family=fontawesome";
+@import "http://weloveiconfonts.com/api/?family=typicons";
+@import "http://weloveiconfonts.com/api/?family=maki";
+[class*="entypo-"]:before {
+    font: 1.5em/1.25em 'entypo',sans-serif;
+}
+[class*="fontawesome-"]:before {
+    font: 1.7em 'FontAwesome',sans-serif;
+}
+[class*="typicons-"]:before {
+    font: 2.5em/1.25em 'typicons',sans-serif;
+}
+[class*="maki-"]:before {
+    font: 2.5em/1.25em 'maki',sans-serif;
+}
+[class*="lnk-"]:after {
+    cursor: pointer;
+}
+.materialType li {
+    height: 2em;
+    line-height: 1.25em;
+}
+body {
+    color: #333333;
+    font: 85%/1.5 Cambria,Georgia,serif;
+    margin: 0 auto;
+    /*padding: 1em 10%;*/
+	padding: 0;
+}
+hgroup h1, hgroup h2 {
+    color: #EFEFE8;
+}
+h1 {
+    font: bold 1.75em/1.1429 'Arial',sans-serif;
+    margin: 0.8571em 0 0;
+	color: #FFF; /*#18577E*/
+}
+h2 {
+    /*-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #A3A3A3;
+    border-image: none;
+    border-style: solid;
+    border-width: 2px 0 1px;
+	text-transform: uppercase;*/
+    color: #18577E;
+    font: bold 1.2em/1.2 'Arial',sans-serif;
+    padding: 0.3em 0 0.6em 0;   
+	margin: 0;
+}
+h3 {
+    /*color: #2C1C16;*/
+    font: bold 1.125em/1.1111 'Arial',sans-serif;
+    margin: 1.1111em 0 0;
+}
+h4, h5, h6 {
+    /*color: #3C2C26;*/
+    font: bold 1em/1 'Arial',sans-serif;
+    margin: 0.75em 0 -0.25em;
+	width: auto;
+}
+h5 {
+	border-bottom: 1px solid #18567E;
+	text-align: left;
+	color: #18567E;
+	margin-bottom: 0.5em;
+	margin-top: 1em;
+	line-height: 1.5em;
+}
+
+p, pre, ol, dl, figure, figcaption, fieldset {
+    margin: 0.75em 0;
+}
+hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #BCB3A6 -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-right: 0 none;
+    border-style: solid none none;
+    border-width: 2px 0 0;
+    display: block;
+    height: 1px;
+    margin: 1em 0;
+    padding: 0;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: none;
+}
+ul ul, ul ol {
+    margin-top: 0;
+}
+dt {
+    font-family: 'Arial',sans-serif;
+    font-weight: bold;
+}
+figcaption, caption {
+    caption-side: bottom;
+    color: #666666;
+    font-family: 'Arial',sans-serif;
+    font-size: 0.875em;
+    line-height: 1.1429;
+    margin: 0.8571em 0;
+    text-align: left;
+}
+a {
+    color: #660033;
+    font-family: 'Arial',sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    color: #882255;
+}
+:lang(en-gb) > q {
+    quotes: "“" "”" "‘" "’";
+}
+q:before {
+    content: open-quote;
+}
+q:after {
+    content: close-quote;
+}
+small {
+    font-size: 0.875em;
+    line-height: 1.1429;
+}
+abbr {
+    letter-spacing: 1px;
+}
+abbr[title]:hover {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+    cursor: help;
+}
+time {
+    color: #666666;
+    font-family: 'Arial',sans-serif;
+    font-size: 0.75em;
+    line-height: 1.3334em;
+    text-transform: uppercase;
+}
+code, samp {
+    font: 0.875em/90% Menlo,Monaco,'Courier New',Courier,monospace;
+}
+code {
+    color: #336699;
+}
+kbd {
+    background-color: #DCD6C6;
+    border: 1px solid #CCC6B6;
+    border-radius: 4px 4px 4px 4px;
+    color: #666666;
+    font: 0.875em/90% sans-serif;
+    margin: 0 0.25em;
+    padding: 0.1429em 0.4286em;
+}
+sub {
+    font-size: smaller;
+    line-height: 90%;
+    vertical-align: sub;
+}
+sup {
+    font-size: smaller;
+    line-height: 90%;
+    vertical-align: super;
+}
+mark, ins {
+    background-color: #FFFFCC;
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+.field {
+    border: 1px solid #BCB3A6;
+    font: 1em/1.5 sans-serif;
+    padding: 0.25em;
+    width: 50%;
+}
+label {
+    display: block;
+    float: left;
+    font-weight: bold;
+    line-height: 1.5;
+}
+label.check {
+    float: none;
+    font-weight: normal;
+    margin-left: 20%;
+}
+fieldset div {
+    margin: 0.75em 0;
+}
+fieldset abbr[title="Required"] {
+    border-bottom: 0 none;
+    color: #990000;
+    font: 1.5em/0.1 sans-serif;
+}
+fieldset em {
+    color: #666666;
+    display: block;
+    font-family: sans-serif;
+    font-size: 0.875em;
+    font-style: normal;
+    line-height: 1.1429;
+    margin: 0.25em 0 0.25em 20%;
+}
+fieldset.options {
+    clear: left;
+}
+fieldset.options ul {
+    list-style: none outside none;
+    margin: 0.25em 0 0.25em 20%;
+}
+fieldset.options li {
+    margin-left: 0;
+}
+fieldset.options ul label {
+    float: none;
+    font-weight: normal;
+    width: auto;
+}
+.view {
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    margin: 0 0 2em;
+    transition: all 0.3s ease-in-out 0s;
+    width: 32.9%;
+}
+.view:hover, .search_lnk span:hover {
+    background: none repeat scroll 0 0 rgba(0, 172, 237, 0.7);
+    opacity: 0.75;
+}
+.searchresources h3 {
+    background-color: #333333;
+    color: #FFFFFF;
+    margin: 0.25em;
+    opacity: 0.5;
+    padding: 0.23em;
+}
+.searchresources h2 {
+    border-top: 0 none;
+    color: #043953;
+    padding-left: 1%;
+}
+

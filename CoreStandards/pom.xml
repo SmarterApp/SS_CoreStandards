@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.air</groupId>
+  <artifactId>corestandards</artifactId>
+  <name>corestandards</name>
+  <packaging>war</packaging>
+  <version>R01.00.00</version>
+  <properties>
+    <!-- project level properties -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <file.encoding>UTF-8</file.encoding>
+    <java-version>1.7</java-version>
+    <org.springframework-version>3.2.9.RELEASE</org.springframework-version>
+    <org.springframework.security-version>3.2.9.RELEASE</org.springframework.security-version>
+    <org.aspectj-version>1.7.2</org.aspectj-version>
+    <org.slf4j-version>1.6.6</org.slf4j-version>
+    <maven-jxr-plugin-version>2.3</maven-jxr-plugin-version>
+    <maven-javadoc-plugin-version>2.9</maven-javadoc-plugin-version>
+    <maven-project-info-reports-plugin-version>2.6</maven-project-info-reports-plugin-version>
+    <junit-version>4.11</junit-version>
+    <org.codehaus.jackson-version>1.9.12</org.codehaus.jackson-version>
+    <org.springframework.security-version>3.2.4.RELEASE</org.springframework.security-version>
+    <log4j-version>1.2.15</log4j-version>
+    <javax.inject-version>1</javax.inject-version>
+    <javax.servlet-version>2.5</javax.servlet-version>
+    <javax.servlet.jsp-api-version>2.1</javax.servlet.jsp-api-version>
+    <javax.servlet-jstl-version>1.2</javax.servlet-jstl-version>
+    <org.openoffice-version>3.2.1</org.openoffice-version>
+    <org.springframework-spring-test-version>2.5.6</org.springframework-spring-test-version>
+    <org.springframework-spring-mock-version>2.0.6</org.springframework-spring-mock-version>
+    <commons-fileupload-version>1.2.2</commons-fileupload-version>
+    <commons-io-version>2.4</commons-io-version>
+    <maven-eclipse-plugin-version>2.9</maven-eclipse-plugin-version>
+    <org.apache.maven.plugins-compiler-version>2.5.1</org.apache.maven.plugins-compiler-version>
+    <org.codehaus.mojo-build-helper-maven-version>1.7</org.codehaus.mojo-build-helper-maven-version>
+    <org.codehaus.mojo-exec-maven-plugin-version>1.2.1</org.codehaus.mojo-exec-maven-plugin-version>
+    <sb11-mna-client.version>0.0.4</sb11-mna-client.version>
+	<sb11-shared-code.version>0.0.6</sb11-shared-code.version>
+	<progman-client.version>0.0.4</progman-client.version>
+  </properties>
+
+  <licenses>
+    <license>
+      <name>AIR-License-1.0</name>
+      <url>http://www.smarterapp.org/documents/American_Institutes_for_Research_Open_Source_Software_License.pdf</url>
+      <distribution>repo</distribution>
+      <comments>Educational Online Test Delivery System Copyright (c) 2013 American Institutes for Research</comments>
+    </license>
+  </licenses>
+  
+  <repositories>
+		<repository>
+			<id>airdev-snapshots</id>
+			<name>airdev-snapshots</name>
+			<url>http://airdev.artifactoryonline.com/airdev/libs-snapshots-local</url>
+		</repository>
+	</repositories>
+
+  <dependencies>
+    <!-- MySQL connector: Required primarily for unit tests. Must be placed in Tomcat's lib directory -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.22</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Spring -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${org.springframework-version}</version>
+      <exclusions>
+	<!-- Exclude Commons Logging in favor of SLF4j -->
+	<exclusion>
+	  <groupId>commons-logging</groupId>
+	  <artifactId>commons-logging</artifactId>
+	</exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId> org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+      <version>${org.codehaus.jackson-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${org.springframework-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${org.springframework-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-expression</artifactId>
+      <version>${org.springframework-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${org.springframework-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>${org.springframework-version}</version>
+    </dependency>
+    <!-- spring security -->
+
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-config</artifactId>
+      <version>${org.springframework.security-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-web</artifactId>
+      <version>${org.springframework.security-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-taglibs</artifactId>
+      <version>${org.springframework.security-version}</version>
+    </dependency>
+    <!-- AspectJ -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+      <version>${org.aspectj-version}</version>
+    </dependency>
+
+	
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${org.springframework.security-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.10.0</version>
+		</dependency>
+
+    <!-- Logging -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${org.slf4j-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jcl-over-slf4j</artifactId>
+      <version>${org.slf4j-version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>${org.slf4j-version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>${log4j-version}</version>
+      <exclusions>
+	<exclusion>
+	  <groupId>javax.mail</groupId>
+	  <artifactId>mail</artifactId>
+	</exclusion>
+	<exclusion>
+	  <groupId>javax.jms</groupId>
+	  <artifactId>jms</artifactId>
+	</exclusion>
+	<exclusion>
+	  <groupId>com.sun.jdmk</groupId>
+	  <artifactId>jmxtools</artifactId>
+	</exclusion>
+	<exclusion>
+	  <groupId>com.sun.jmx</groupId>
+	  <artifactId>jmxri</artifactId>
+	</exclusion>
+      </exclusions>
+    </dependency>
+
+    <!-- @Inject -->
+    <dependency>
+      <groupId>javax.inject</groupId>
+      <artifactId>javax.inject</artifactId>
+      <version>${javax.inject-version}</version>
+    </dependency>
+
+    <!-- Servlet -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>${javax.servlet-version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>${javax.servlet.jsp-api-version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>${javax.servlet-jstl-version}</version>
+    </dependency>
+    
+    <dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.2.1</version>
+		</dependency>
+
+	<!-- Start: Program management integration dependency -->
+	<dependency>
+		<groupId>org.opentestsystem.shared</groupId>
+		<artifactId>prog-mgmnt-client</artifactId>
+		<version>${progman-client.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.opentestsystem.shared</groupId>
+		<artifactId>prog-mgmnt-client-null-impl</artifactId>
+		<version>${progman-client.version}</version>
+	</dependency>
+	<!-- End: Program management integration dependency -->
+	
+	<!-- Start: Monitoring and Alerting integration dependency -->
+	<dependency>
+	    <groupId>org.opentestsystem.shared</groupId>
+	    <artifactId>monitoring-alerting.client-null-impl</artifactId>
+	    <version>${sb11-mna-client.version}</version>
+	</dependency>
+	<dependency>
+		    <groupId>org.opentestsystem.shared</groupId>
+		    <artifactId>monitoring-alerting.client</artifactId>
+		    <version> ${sb11-mna-client.version}</version>
+		</dependency>
+	<!--End: Monitoring and Alerting integration dependency -->
+	
+	<dependency>
+		    <groupId>org.opentestsystem.shared</groupId>
+		    <artifactId>sb11-shared-security</artifactId>
+		    <version>0.0.1</version>
+	</dependency>
+	<!--Start: Build version info -->
+	<dependency>
+	    <groupId>org.opentestsystem.shared</groupId>
+	    <artifactId>sb11-shared-code</artifactId>
+	    <version>${sb11-shared-code.version}</version>
+	</dependency>
+	<!--  End: Build version info -->
+    <!-- Open Office dependencies -->
+    <dependency>
+      <groupId>org.openoffice</groupId>
+      <artifactId>unoil</artifactId>
+      <version>${org.openoffice-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openoffice</groupId>
+      <artifactId>juh</artifactId>
+      <version>${org.openoffice-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openoffice</groupId>
+      <artifactId>jurt</artifactId>
+      <version>${org.openoffice-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openoffice</groupId>
+      <artifactId>ridl</artifactId>
+      <version>${org.openoffice-version}</version>
+    </dependency>
+
+    <!-- Test -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit-version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${org.springframework-spring-test-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-mock</artifactId>
+      <version>${org.springframework-spring-mock-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>${commons-fileupload-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>${commons-io-version}</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+		<artifactId>maven-eclipse-plugin</artifactId>
+		<version>${maven-eclipse-plugin-version}</version>
+		<configuration>
+		  <additionalProjectnatures>
+		    <projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
+		  </additionalProjectnatures>
+		  <additionalBuildcommands>
+		    <buildcommand>org.springframework.ide.eclipse.core.springbuilder</buildcommand>
+		  </additionalBuildcommands>
+		  <downloadSources>true</downloadSources>
+		  <downloadJavadocs>true</downloadJavadocs>
+		</configuration>
+      </plugin>
+      <plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-compiler-plugin</artifactId>
+	<version>${org.apache.maven.plugins-compiler-version}</version>
+	<configuration>
+	  <source>1.7</source>
+	  <target>1.7</target>
+	  <!--<compilerArgument>-Xlint:all</compilerArgument> -->
+	  <showWarnings>true</showWarnings>
+	  <showDeprecation>true</showDeprecation>
+	</configuration>
+      </plugin>
+      <plugin>
+	<groupId>org.codehaus.mojo</groupId>
+	<artifactId>build-helper-maven-plugin</artifactId>
+	<version>${org.codehaus.mojo-build-helper-maven-version}</version>
+	<executions>
+	  <execution>
+	    <phase>generate-sources</phase>
+	    <goals>
+	      <goal>add-source</goal>
+	    </goals>
+	    <configuration>
+	      <sources>
+		<source>src/thirdparty/java</source>
+	      </sources>
+	    </configuration>
+	  </execution>
+	</executions>
+      </plugin>
+      <plugin>
+	<groupId>org.codehaus.mojo</groupId>
+	<artifactId>exec-maven-plugin</artifactId>
+	<version>${org.codehaus.mojo-exec-maven-plugin-version}</version>
+	<configuration>
+	  <mainClass>org.test.int1.Main</mainClass>
+	</configuration>
+      </plugin>
+      
+      <plugin>
+		    <artifactId>maven-war-plugin</artifactId>
+		    <version>2.4</version>
+		    <configuration>
+		        <archive>
+		            <manifest>
+		                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+		            </manifest>
+		            <manifestEntries>
+		                <Specification-Version>${project.version}</Specification-Version>
+		                <Implementation-Version>${BUILD_NUMBER}</Implementation-Version>
+		                <Implementation-Date>${BUILD_ID}</Implementation-Date>
+		                <Implementation-Identifier>${GIT_COMMIT}</Implementation-Identifier>
+		                <Implementation-Url>${BUILD_URL}</Implementation-Url>
+		            </manifestEntries>
+		        </archive>
+		    </configuration>
+		</plugin>
+		
+    </plugins>
+  </build>
+  <reporting>
+    <plugins>
+      <!-- jxr creates cross a reference of the projects source, required by 
+	   surefire-reports, pmd, etc. to avoid "Unable to locate Source XRef to link 
+	   to" message -->
+      <plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-jxr-plugin</artifactId>
+	<version>${maven-jxr-plugin-version}</version>
+      </plugin>
+      <plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-javadoc-plugin</artifactId>
+	<version>${maven-javadoc-plugin-version}</version>
+      </plugin>
+      <plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-project-info-reports-plugin</artifactId>
+	<version>${maven-project-info-reports-plugin}</version>
+      </plugin>
+    </plugins>
+  </reporting>
+</project>

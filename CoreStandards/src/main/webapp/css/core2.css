@@ -1,0 +1,1861 @@
+@charset "utf-8";
+/*
+/* 
+ * HTML5 âœ° Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling. 
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ * 
+ * Dreamweaver modifications:
+ * 1. Commented out selection highlight
+ * 2. Removed media queries section (we add our own in a separate file)
+ *
+ * ==|== normalize ==========================================================
+ */
+
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+	display: block;
+}
+audio, canvas, video {
+	display: inline-block;
+*display: inline;
+*zoom: 1;
+}
+audio:not([controls]) {
+	display: none;
+}
+[hidden] {
+display: none;
+}
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html {
+	font-size: 100%;
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.231;
+	min-width: 510px;
+}
+body, button, input, select, textarea {
+	font-family: 'Arial', sans-serif;
+	color: #5a5a5a;
+}
+/* 
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+/* Dreamweaver: uncomment these if you do want to customize the selection highlight
+ *::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+ *::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+ */
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a {
+	color: #0883b0;
+}
+a:visited {
+	color: #551a8b;
+}
+a:hover {
+	color: #8e0134;
+}
+a:focus {
+	outline: thin dotted;
+}
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active {
+	outline: 0;
+}
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol {
+	margin: 1em 0;
+	padding: 0 0 0 40px;
+}
+dd {
+	margin: 0 0 0 40px;
+}
+nav ul, nav ol {
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+}
+.nav ol {
+  list-style-position: inside;
+  list-style-type: decimal !important;
+  padding:0px;
+ }
+
+.secondary .nav ol {
+    list-style: none outside none;
+}
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/e 
+ */
+
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+	vertical-align: middle;
+}
+/*
+ * Correct overflow not hidden in IE9 
+ */
+
+svg:not(:root) {
+	overflow: hidden;
+}
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure {
+	margin: 0;
+}
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form {
+	margin: 0;
+}
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+/* Indicate that 'label' will shift focus to the associated form element */
+label {
+	cursor: pointer;
+}
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+
+legend {
+	border: 0;
+*margin-left: -7px;
+	padding: 0;
+}
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea {
+	font-size: 100%;
+	margin: 0;
+	vertical-align: baseline;
+*vertical-align: middle;
+}
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input {
+	line-height: normal;
+*overflow: visible;
+}
+/*
+ * Reintroduce inner spacing in 'table' to avoid overlap and whitespace issues in IE6/7
+ */
+
+table button, table input {
+*overflow: auto;
+}
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+-webkit-appearance: none;
+}
+
+/* 
+ * Remove inner padding and border in FF3/4: h5bp.com/l 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+border: 0;
+padding: 0;
+}
+/* 
+ * 1. Remove default vertical scrollbar in IE6/7/8/9 
+ * 2. Allow only vertical resizing
+ */
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
+}
+
+/* Colors for form validity */
+input:valid, textarea:valid {
+}
+input:invalid, textarea:invalid {
+background-color: #f0dddd;
+}
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td {
+	vertical-align: top;
+}
+/* ==|== primary styles =====================================================
+   Author: 
+   ========================================================================== */
+  
+.container {
+}
+.clear {
+	clear: both;
+}
+/* Header */
+
+
+.header {
+	border-bottom: #FFFFFF;
+	background-color: ##0682B4;
+}
+/*.header a {
+    background-color: #0682B4;
+    background-image: url("../images/logo_sbac.png");
+    background-position: left bottom;
+    background-size: auto auto;
+    padding-top: 1.3em;
+}*/
+
+.info {
+	color: #FFFFFF;
+	float: right;
+	margin: 1.1em 0 0;
+}
+.info a {
+	color: #ffffff;
+}
+.info a:hover {
+	color: #ccc;
+}
+.info ul {
+	padding: 0;
+	margin: 0;
+	text-align: right;
+	width: auto;
+	list-style-type: none;
+}
+.info ul li {
+	display: inline-block;
+	padding: 4px 12px 7px 7px;
+	border-right: 1px solid #ffffff;
+}
+.info ul li:last-child {
+	border-right: 0px;
+}
+.info ul li#systemsDropdown {
+	cursor: pointer;
+	position: relative;
+}
+.info ul li#systemsDropdown ul {
+	display: none;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	background-color: #18577E;
+	width: 6.7em;
+	border-radius: 0 0 10px 10px;
+}
+.info ul li#systemsDropdown ul li {
+	width: auto;
+	border: none;
+	display: block;
+	padding: 0;
+}
+.info ul li#systemsDropdown ul li:last-child {
+	width: auto;
+	border: none;
+	display: block;
+	padding: 0;
+	border-radius: 0 0 10px 10px;
+}
+.info ul li#systemsDropdown ul li a {
+	padding: 9px 5% 7px 5%;
+	display: inline-block;
+	width: 90%;
+}
+.info ul li#systemsDropdown img {
+	padding: 2px 0 0 5px;
+	vertical-align: top;
+}
+.info ul li#systemsDropdown:hover {
+	background-color: #18577E;
+}
+.info ul li#systemsDropdown:hover ul {
+	display: block;
+}
+.info ul li#systemsDropdown ul li:hover {
+	background-color: #0883B0;
+}
+/*.htools {
+    display: inline-block;
+    padding: 0 0.3em 0 0.5em;
+    width: 25px;
+    height: 24px;
+    border: 1px solid transparent;
+    font-weight: normal;
+}
+.htools:hover {
+    border: 1px solid gray;
+    background: #fff;
+    z-index: 999;
+    border-radius: 6px 6px 0 0;
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+}
+.htools ul {
+    display: none;
+    padding: 0;
+    float: right;
+    border: 1px solid gray;
+    width: 140px;
+    text-align: right;
+    z-index: 999;
+    position: relative; 
+    margin-right: -4px;
+    margin-top: 3px;
+}
+.htools ul li {
+    padding: 0.5em;
+    margin: 0;
+    border-bottom: 1px solid #c0c0c0;
+    background: #ffffff;
+    color: #0883b0;
+    list-style-type: none;
+}
+.htools ul li.last { 
+    border-bottom: none;  
+}
+.htools:hover ul {
+    display: block;
+}
+.htools li:hover {
+    background: #e6e7e8;    
+}
+.htools li a {
+    color: #0883b0;
+}*/
+
+.banner {
+}
+.header {
+	background-color: #0682B4;
+	display: inline-block;
+	width: 100%;
+}
+.logo img {
+	vertical-align: top;
+}
+.title {
+	display: inline-block;
+	margin-right: 1em;
+}
+.title h1 {
+	font-size: 1.4em;
+	margin: 1.1em 0.5em 0 0;
+	padding: 0;
+	color: #ffffff;
+	width: auto;
+}
+.setupBtn button, .homeBtn button {
+	width: auto;
+	float: right;
+	margin: 1em 1em 0 0;
+	display: inline-block;
+}
+/*Nav Bar*/
+.topNav {
+	background-color: #fff;
+	color: white;
+	font-size: 1.1em;
+	display: inline-block;
+	vertical-align: bottom;
+}
+.topNav a {
+	color: #0883b0;
+	display: inline-block;
+	padding: .5em .75em;
+	width: auto;
+}
+.topNav a:hover {
+	color: #ccc;
+}
+.topNav ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+.topNav ul li {
+	display: inline-block;
+	border-right: 0px solid #ffffff;
+}
+.topNav ul li:last-child {
+	border-right: 0px;
+}
+.topNav ul li#systemsDropdown {
+	cursor: pointer;
+	position: relative;
+}
+.topNav ul li#systemsDropdown ul {
+	display: none;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	background-color: #18577E;
+	width: 13em;
+	border-radius: 0 0 10px 10px;
+	color: #0883B0;
+}
+.topNavul li#systemsDropdown ul li {
+	width: auto;
+	border: none;
+	display: block;
+	padding: 0;
+}
+.topNav ul li#systemsDropdown ul li:last-child {
+	width: auto;
+	border: none;
+	display: block;
+	padding: 0;
+	border-radius: 0 0 10px 10px;
+}
+.topNav ul li#systemsDropdown ul li a {
+	padding: 9px 5% 7px 5%;
+	display: inline-block;
+	width: 90%;
+}
+.topNav ul li#systemsDropdown img {
+	padding: 2px 0 0 5px;
+	vertical-align: top;
+}
+.topNav ul li#systemsDropdown:hover {
+	background-color: #18577E;
+}
+.topNav ul li#systemsDropdown:hover ul {
+	display: block;
+}
+.topNav ul li#systemsDropdown ul li:hover {
+	background-color: #0883B0;
+}
+.dropdown {
+	border-radius: 10px 10px 0 0;
+	display: none;
+	float: right;
+	position: relative;
+}
+/*.dropdown:hover{
+    background-color:#EAEAEA;
+}
+.dropdown:hover a{
+    color:#0883B0;
+}
+*/.dropdown ul {
+	list-style: none;
+	position: absolute;
+	display: inline-block;
+	top: 62px;
+	right: 0;
+	margin: 0;
+	border-radius: 0 0 10px 10px;
+	background-color: #EAEAEA;
+	color: #0883B0;
+	padding: 0;
+	opacity: .75;
+}
+.dropdown ul li {
+	display: block;
+}
+.dropdown ul li:last-child {
+	border-radius: 0 0 10px 10px;
+}
+.dropdown ul li a {
+	white-space: nowrap;
+	padding: .5em 1em;
+	display: block;
+	color: #0883B0;
+}
+.dropdown ul li:hover {
+	background-color: #0883B0;
+}
+.dropdown ul li:hover a {
+	color: #fff;
+}
+.dropdown button .hoverArrow {
+	display: none;
+}
+.dropdown button:hover img {
+	display: none;
+}
+.dropdown button:hover .hoverArrow {
+	display: inline-block;
+}
+/* main area - generic stuff */
+.content {
+  min-width: 1024px;
+  position: relative;
+}
+.boxWrap {
+	/*text-align: center;*/
+	margin: 0 auto;
+	margin-top: 0.5em;
+}
+.boxBg {
+	/*border: 4px solid #93969c;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 0 0 4px 3px #d1d3d4;
+	-webkit-box-shadow: 0 0 4px 3px #d1d3d4;
+	box-shadow: 0 0 4px 3px #d1d3d4;*/
+	overflow-wrap: break-word;
+}
+.boxIcon {
+	margin-top: 0.4em!important;
+	display: block;
+	width: 100%;
+	font-size: 1.3em;
+	color: #18577E;
+}
+.boxTitle {
+	display: block;
+	width: 100%;
+	text-align: left;
+}
+/* .boxTitle h2 {
+    color: #808080;
+    font-family: Times New Roman;
+    font-size: 1.3em;
+    font-style: italic;
+} */
+ .homeTitle h2 {
+    color: #808080;
+    font-family: Times New Roman;
+    font-size: 1.3em;
+    font-style: italic;
+}
+.btnGroup {
+	
+	width: 740px;
+}
+.viewPreviewBtnGroup {
+	margin: 2em 2em 0;
+}
+button:hover {
+	color:#119B49;
+	background: rgb(209,211,212); /* Old browsers */
+}
+.home button:hover {
+	color:#00B5E2;
+	background: transparent; /* Old browsers */
+}
+.home button:hover p{
+	color:#00B5E2;
+	background: transparent; /* Old browsers */
+}
+button.btnCancel:hover {
+	color: #8e0134;
+	background: rgb(209,211,212); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI2JSIgc3RvcC1jb2xvcj0iI2QxZDNkNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, rgba(209,211,212,1) 6%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(6%, rgba(209,211,212,1)), color-stop(100%, rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(209,211,212,1) 6%, rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(209,211,212,1) 6%, rgba(2229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(209,211,212,1) 6%, rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(209,211,212,1) 6%, rgba(229,229,229,1) 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d3d4', endColorstr='#E5E5E5', GradientType=0 ); /* IE6-8 */
+}
+button span.btnIcon {
+	padding-right: 5px;
+	font-size: 1.2em;
+	display: inline-block;
+}
+button span.btnIcon.btndbl {
+	margin-top: 0.2em;
+}
+button span.btnText {
+  display: inline-block;
+  font: bold 1.1em/1.2 'Arial',sans-serif;
+  margin-top: 0.5em;
+  vertical-align: top;
+}
+button span.btnText.btndbl {
+	margin-top: 0.1em;
+}
+.setup button span.btnText {
+	width: 45%;
+}
+/* field group */
+.fieldGroup {
+  text-align: center;
+}
+.fieldGroup ul {
+	margin: 0 auto 0.75em;
+	padding: 0;
+	text-align: center;
+	max-width: 800px;
+}
+.fieldGroup li {
+  display: inline-block;
+/*  list-style-type: none;*/
+  padding: 0.7em 0.2em;
+  text-align: center;
+  width: 48%;
+}
+.fieldGroup li span {
+	text-align: left;
+	display: block;
+}
+.fieldGroup label {
+  font-weight: normal;
+  text-align: left;
+  width: 6em;
+}
+.fieldGroup select, .fieldGroup input {
+	padding: 0.1em;
+	margin-left: 0.7em;
+}
+.fieldGroup select {
+	width: 175px;
+}
+.fieldGroup button {
+  margin-top: 0.75em;
+  width: 18%;
+}
+.fieldGroup h5 {
+    text-align: center;
+}
+.fieldGroup button.boxBtn {
+    margin-top: 0.75em;
+	width: auto;
+	}
+/*tabs*/
+.fieldGroup .tabs {
+	list-style: none;
+	height: 34px;
+	margin-top: 1em;
+}
+.tabs li {
+	float: left;
+	margin-right: 0.1em;
+	color: #fff;
+	text-align: center;
+	width: 15%;
+	min-width: 120px;
+	font-size: 1em;
+	font-weight: bold;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	background: rgb(31,116,169); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkMWQzZDQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, rgba(31,116,169,1) 0%, rgba(24,87,126,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(31,116,169,1)), color-stop(100%, rgba(24,87,126,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(31,116,169,1) 0%, rgba(24,87,126,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(31,116,169,1) 0%, rgba(24,87,126,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(31,116,169,1) 0%, rgba(24,87,126,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(31,116,169,1) 0%, rgba(24,87,126,1) 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f74a9', endColorstr='#18577e', GradientType=0 ); /* IE6-8 */
+}
+.tabs li:hover {
+	cursor: pointer;
+	background: rgb(187,14,77); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkMWQzZDQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, rgba(187,14,77,1) 0%, rgba(148,2,56,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(187,14,77,1)), color-stop(100%, rgba(148,2,56,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(187,14,77,1) 0%, rgba(148,2,56,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(187,14,77,1) 0%, rgba(148,2,56,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(187,14,77,1) 0%, rgba(148,2,56,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(187,14,77,1) 0%, rgba(148,2,56,1) 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bb0e4d', endColorstr='#940238', GradientType=0 ); /* IE6-8 */
+}
+.blueRule {
+	border-bottom: 3px solid #18577e;
+	-moz-box-shadow: 1px 2px 3px #999;
+	-webkit-box-shadow: 1px 2px 3px #999;
+	box-shadow: 1px 2px 3px #999;
+}
+.tabs .tabOn {
+	background: rgb(187,14,77); /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkMWQzZDQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, rgba(187,14,77,1) 0%, rgba(148,2,56,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(187,14,77,1)), color-stop(100%, rgba(148,2,56,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(187,14,77,1) 0%, rgba(148,2,56,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(187,14,77,1) 0%, rgba(148,2,56,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(187,14,77,1) 0%, rgba(148,2,56,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(187,14,77,1) 0%, rgba(148,2,56,1) 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bb0e4d', endColorstr='#940238', GradientType=0 ); /* IE6-8 */
+}
+/*tables*/
+.tableBox {
+	border-radius: 10px
+}
+.dataTable {
+	margin-top: .5em;
+	width: 100%;
+}
+.dataTable th {
+  background: none repeat scroll 0 0 #3DB11A;
+  border: 1px solid #E4E4E4;
+  color: #FFFFFF;
+  padding: 0.3em;
+  vertical-align: middle;
+}
+.dataTable td {
+	text-align: left;
+	border: 1px solid #e4e4e4;
+	padding: 0.3em;
+	margin: 0.3em;
+	vertical-align: middle;
+	background: #f6f8f9;
+}
+.dataTable .extra td {
+	background-color: #fff
+}
+.dataTable select {
+	margin-left: .25em;
+}
+.dataTable td div {
+	float: left;
+	text-align: left;
+}
+.dataTable td div div {
+	float: none;
+	padding-bottom: 3px;
+}
+.dataTable td div pre {
+	background-color: #eaeaea;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 4px 4px 4px 4px;
+	display: block;
+	line-height: 20px;
+	margin: 0;
+	padding: .25em;
+	white-space: pre-wrap;
+	word-break: break-all;
+	word-wrap: break-word;
+	min-height: 1.5em;
+}
+.dataTable .extra {
+	display: none;
+}
+#tableNav {
+	margin: 0;
+}
+#tableNav table {
+	width: 100%;
+}
+#tableNav table th {
+	font-weight: normal;
+	font-size: 1em;
+	padding: 0.3em 0.5em;
+}
+#tableNav table th input {
+	height: 10px;
+}
+.tableNavL {
+	float: right;
+	text-align: right;
+}
+.tableNavR {
+	float: left;
+	text-align: left;
+}
+#tableNav .tablePage {
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+#tableNav .tablePage li {
+	float: left;
+	padding: .25em .5em;
+	line-height: 110%;
+	border-right: none;
+}
+#tableNav .tablePage li:hover {
+	background-color: #ccc;
+	cursor: pointer;
+}
+.tbNav {
+	background-image: url(../images/tableNav.png);
+	height: 9px;
+	display: inline-block;
+	margin: 0 5px;
+	opacity: 0.5;
+}
+.tbprev {
+	width: 9px;
+	background-position: top right;
+}
+.tbfirst {
+	width: 13px;
+	background-position: top left;
+}
+.tbnext {
+	width: 9px;
+	background-position: bottom right;
+}
+.tblast {
+	width: 13px;
+	background-position: bottom left;
+}
+#tableNav .tablePage li:hover .tbNav {
+	opacity: 1;
+	cursor: pointer;
+}
+.printButton {
+	background: url("../images/print.png") no-repeat scroll right center transparent;
+	padding: 8px;
+	padding-right: 30px;
+	dispay: inline-block;
+	float: right;
+	line-height: 100%;
+	border: 1px solid #ccc;
+}
+.printButton:hover {
+	background-color: #e3f1fa;
+	cursor: pointer;
+}
+.tableBox .itemsPage {
+	text-align: left;
+	float: left;
+	line-height: 150%;
+	margin-top: 5px;
+}
+.tableBox select {
+	float: left;
+	margin-right: 5px;
+}
+/*home page */
+.boxWrap.home {
+	width: 700px;
+}
+.boxWrap.home .boxBg {
+	/*height: 410px;*/
+	width: auto;
+}
+.boxBg.add {
+	float: left;
+}
+.boxBg.edit {
+	float: right;
+}
+.boxWrap.home button span.btnText {
+  display: block;
+  margin: auto 0;
+  min-height: 3em;
+  text-align: center;
+}
+/* Setup Screen */
+.boxWrap.setup {
+	width: 300px;
+}
+.boxWrap.setup2 {
+	width: auto;
+}
+.setup .boxBg, .setup2 .boxBg {
+	padding: 1em .7em 2em;
+}
+.setup .btnGroup, .setup2 .btnGroup {
+	text-align: left;
+}
+.setup .btnGroup button, .setup2 .btnGroup button {
+	width: auto;
+}
+.setup .btnGroup .moreBtn, .setup2 .btnGroup .moreBtn {
+	margin-left: 0.8em;
+}
+.setup .btnGroup .cancelBtn, .setup2 .btnGroup .cancelBtn {
+	float: right;
+}
+.saveConfirm {
+	text-align: center;
+	color: #3C0;
+	margin: 0.1em 0;
+	font-style: italic;
+	visibility: hidden;
+}
+/*Import Screen*/
+.import {
+	width: 500px;
+}
+.import .fileGroup {
+	display: inline-block;
+	margin-top: 1em;
+}
+.fileGroup label {
+	text-align: right;
+	font-weight: normal;
+	vertical-align: middle;
+	line-height: 3.5em;
+	float: none;
+	display: inline-block;
+}
+.fileGroup input {
+	padding: 0.1em;
+	margin-left: 0.7em;
+	max-width: 75%;
+}
+.import .browseBtn {
+	width: auto;
+	margin-left: 0.8em;
+	margin-bottom: 0;
+}
+.import .prvBtn {
+	width: 60%;
+}
+/*Import Preview Screen*/
+
+.importPrev .fieldGroup {
+	text-align: left;
+	margin: 0 2em;
+}
+.fieldGroup h2 {
+	text-align: left;
+}
+.note {
+	font-size: 1.0em;
+	font-weight: bold;
+}
+.importPrev .prvBtn {
+	width: 30%;
+	margin: 0 5% 1.5em;
+}
+/*Popups for failed and confirmed*/
+.popUpBG {
+	position: absolute;
+	background: #000;
+	opacity: 0.75;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+.popUp {
+	position: absolute;
+	width: 75%;
+	background-color: #fff;
+	top: 125px;
+}
+.popUpConfirm {
+	position: absolute;
+	width: 75%;
+	background-color: #fff;
+	top: 125px;
+}
+.popUpConfirm .fieldGroup {
+	padding: 0 2em;
+}
+.popUpConfirm button {
+	width: 30%;
+	margin-top: 2em;
+}
+.center {
+	text-align: center;
+}
+.closePop {
+	padding: 0.25em 0.5em;
+	text-align: right;
+	color: #fff;
+	background-color: #5a5a5a;
+	font-size: 1.25em;
+}
+.closePop span:hover {
+	cursor: pointer;
+}
+.results {
+	margin: 1.5em 1em;
+	border: 2px solid #5a5a5a;
+	border-radius: 5px;
+	padding: 1em;
+}
+.results div {
+	text-align: left;
+	padding-top: 1.5em;
+}
+.results .center {
+	text-align: center;
+}
+.results button {
+	width: 35%;
+	margin-bottom: 0.5em;
+	padding-top: 0.5em;
+}
+.results .error {
+	color: red;
+	padding-right: 0.75em;
+}
+.results .warning {
+	color: #FC0;
+	padding-right: 0.75em;
+}
+.results .flag {
+	color: green;
+	padding-right: 0.75em;
+}
+/* Copy Publication Page */
+.fileGroup div {
+	text-align: right;
+	width: 100%;
+	margin: 0 auto;
+}
+.fileGroup select {
+	width: 15em;
+	margin-left: 1.5em;
+	height: 1em;
+}
+/* View Publication Page*/
+.viewBtn {
+	width: 40%;
+	margin: 0 .5em 1em;
+}
+.updateBtn {
+	margin-top: 0.5em;
+	width: 75%;
+	vertical-align: top;
+	display: inline-block;
+}
+.noMargin {
+	margin: 0!important;
+}
+/* preview publication page */
+
+.pviewBtn {
+	width: 20%;
+	margin: 0 .5em 1em;
+}
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
+/* Edit Publication Page */
+.editBtn {
+	width: 30%;
+	margin: 0 8% 1.5em;
+}
+.blue {
+	color: #0883B0;
+	font-weight: bold;
+}
+.link {
+	padding: 0 .25em;
+}
+.link:hover {
+	cursor: pointer;
+}
+/* Add New User Page */
+.indent {
+	margin-left: 2.5em;
+}
+.leftAlign {
+	margin-left: 9px;
+	text-align: left;
+}
+.btnSpace {
+	margin: 0 2em 1.5em;
+}
+.setup .center {
+	text-align: center;
+}
+/* footer */
+.footer {
+}
+/* custom sort styles */
+.columnHover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+th.headerSortUp:after {
+	content: url(../images/asc.gif);
+	/*background: url(../images/tableGradient.png) repeat-x scroll 50% 50% #BFDCA3;*/
+}
+th.headerSortDown:after {
+	content: url(../images/desc.gif);
+	/*background: url(../images/tableGradient.png) repeat-x scroll 50% 50% #BFDCA3;*/
+}
+/* ==== Icon classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+.plusMin {
+	height: 16px;
+	width: 30px;
+	display: inline-block;
+	background-image: url(../images/plusMin.png);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	opacity: .5;
+	cursor: pointer;
+}
+button {
+  background: none repeat scroll 0 0 #666666;
+  border: 0 none;
+  color: #FFFFFF;
+  font-size: 1em;
+  font-weight: bold;
+}
+.icon_sprite {
+	margin: 2px;
+	background-image: url(../images/SBAC_IconSprite_cust.png);
+	width: 25px;
+	height: 25px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0px!important;
+}
+.icon_home1 {
+	background-position: 0 0;
+}
+.icon_home2 {
+	background-position: -25px 0;
+}
+.icon_setup1 {
+	background-position: 0 -25px;
+}
+.icon_setup2 {
+	background-position: -25px -25px;
+}
+.icon_info1 {
+	background-position: 0 -50px;
+}
+.icon_info2 {
+	background-position: -25px -50px;
+}
+.icon_upload1 {
+	background-position: 0 -75px;
+}
+.icon_upload2 {
+	background-position: -25px -75px;
+}
+.icon_download1 {
+	background-position: 0 -100px;
+}
+.icon_download2 {
+	background-position: -25px -100px;
+}
+.icon_copy1 {
+	background-position: 0 -125px;
+}
+.icon_copy2 {
+	background-position: -25px -125px;
+}
+.icon_edit1 {
+	background-position: 0 -150px;
+}
+.icon_edit2 {
+	background-position: -25px -150px;
+}
+.icon_view1 {
+	background-position: 0 -175px;
+}
+.icon_view2 {
+	background-position: -25px -175px;
+}
+.icon_preview1 {
+	background-position: 0 -200px;
+}
+.icon_preview2 {
+	background-position: -25px -200px;
+}
+.icon_publisher1 {
+	background-position: 0 -225px;
+}
+.icon_publisher2 {
+	background-position: -25px -225px;
+}
+.icon_subject1 {
+	background-position: 0 -250px;
+}
+.icon_subject2 {
+	background-position: -25px -250px;
+}
+.icon_grade1 {
+	background-position: 0 -275px;
+}
+.icon_grade2 {
+	background-position: -25px -275px;
+}
+.icon_update1 {
+	background-position: 0 -300px;
+}
+.icon_update2 {
+	background-position: -25px -300px;
+}
+.icon_cancel1 {
+	background-position: 0 -325px;
+}
+.icon_cancel2 {
+	background-position: -25px -325px;
+}
+.icon_cancel3 {
+	background-position: -50px -325px;
+}
+.icon_delete1 {
+	background-position: 0 -500px;
+}
+.icon_delete2 {
+	background-position: -25px -500px;
+}
+.icon_delete3 {
+	background-position: -50px -500px;
+}
+.icon_save1 {
+	background-position: 0 -350px;
+}
+.icon_save2 {
+	background-position: -25px -350px;
+}
+.icon_saveAdd1 {
+	background-position: 0 -375px;
+}
+.icon_saveAdd2 {
+	background-position: -25px -375px;
+}
+.icon_node1 {
+	background-position: 0 -400px;
+}
+.icon_node2 {
+	background-position: -25px -400px;
+}
+.icon_editSM1 {
+	background-position: 0 -425px;
+}
+.icon_editSM2 {
+	background-position: -25px -425px;
+}
+/*Hover States*/
+    
+    
+.boxBtn:hover .icon_home2 {
+	background-position: -50px 0;
+}
+.boxBtn:hover .icon_setup2 {
+	background-position: -50px -25px;
+}
+.boxBtn:hover .icon_info2 {
+	background-position: -50px -50px;
+}
+.boxBtn:hover .icon_upload2 {
+	background-position: -50px -75px;
+}
+.boxBtn:hover .icon_download2 {
+	background-position: -50px -100px;
+}
+.boxBtn:hover .icon_copy2 {
+	background-position: -50px -125px;
+}
+.boxBtn:hover .icon_edit2 {
+	background-position: -50px -150px;
+}
+.boxBtn:hover .icon_view2 {
+	background-position: -50px -175px;
+}
+.boxBtn:hover .icon_preview2 {
+	background-position: -50px -200px;
+}
+.boxBtn:hover .icon_publisher2 {
+	background-position: -50px -225px;
+}
+.boxBtn:hover .icon_subject2 {
+	background-position: -50px -250px;
+}
+.boxBtn:hover .icon_grade2 {
+	background-position: -50px -275px;
+}
+.boxBtn:hover .icon_update2 {
+	background-position: -50px -300px;
+}
+.boxBtn:hover .icon_cancel2 {
+	background-position: -50px -325px;
+}
+.boxBtn:hover .icon_delete2 {
+	background-position: -50px -500px;
+}
+.boxBtn .red {
+	color: #ab0020;
+}
+.boxBtn:hover .red {
+	color: #7e0119;
+}
+.boxBtn:hover .icon_save2 {
+	background-position: -50px -350px;
+}
+.boxBtn:hover .icon_saveAdd2 {
+	background-position: -50px -375px;
+}
+.boxBtn:hover .icon_node2 {
+	background-position: -50px -400px;
+}
+.boxBtn:hover .icon_editSM2 {
+	background-position: -50px -425px;
+}
+.icon_reTry1 {
+	background-position: 0 -450px;
+}
+.icon_reTry2 {
+	background-position: -25px -452px;
+}
+.boxBtn:hover .icon_reTry2 {
+	background-position: -50px -452px;
+}
+.icon_error {
+	background-position: 0 -476px;
+	width: 20px;
+	height: 23px;
+}
+.icon_warning {
+	background-position: -20px -476px;
+	width: 20px;
+	height: 23px;
+}
+.icon_flag {
+	background-position: -40px -476px;
+	width: 20px;
+	height: 23px;
+}
+.icon_close {
+	background-position: -60px -475px;
+	width: 15px;
+	height: 15px;
+}
+/* added CSS from  AIR*/
+
+.green  {
+	color: #246A34;
+}
+.maroon {
+	color: #8A1538;
+}
+.navy  {
+	color: #04384E;
+}
+
+/*home page settings*/
+.nav {
+  margin: auto;
+  width: 60em;
+}
+
+
+.home .nav li {
+  background: url("../images/arrow.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+  float: left;
+  padding: 1em 0;
+  vertical-align: top;
+  width: 15em;
+  font: bold 1.2em/1.2 'Arial',sans-serif;
+  text-align:center;
+  cursor: pointer;
+  list-style: none;
+}
+.home .nav p {font:normal .9em/1.2 'Arial',sans-serif;color:#333;}
+.home .nav li:hover {
+	color:#fff;
+	background-color:#00B5E2;}
+	.home .nav li:hover p{color:#fff;}
+.nav li:last-child {
+	background: none;
+}
+
+.home .manageTenants span {
+	background: url("../images/ManageTenants.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.home .manageTenants:hover span {
+	background: url("../images/ManageTenants_over.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+.home .manageComponents span {
+	background: url("../images/ManageComponents.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.home .manageComponents:hover span {
+	background: url("../images/ManageComponents_over.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.home .configProperties span {
+	background: url("../images/ConfigProperties.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.home .configProperties:hover span {
+	background: url("../images/ConfigProperties_over.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+.home .uploadBranding span {
+	background: url("../images/UploadBranding.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.home .uploadBranding:hover span {
+	background: url("../images/UploadBranding_over.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.home .configBranding span {
+	background: url("../images/ConfigBranding.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.home .configBranding:hover span {
+	background: url("../images/ConfigBranding_over.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.home .previewBranding span {
+	background: url("../images/PreviewBranding.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.home .previewBranding:hover span {
+	background: url("../images/PreviewBranding_over.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.nav span {
+	margin: auto;
+	height: 6em;
+	width: 7em;
+}
+.nav p {
+	text-align: center;
+	min-height: 2.5em;
+}
+/*end home page settings*/
+/*secondary page settings*/
+.secondary .nav {
+  border-right: 1px solid #999999;
+  height: 100%;
+  left: 0;
+  min-height: 700px;
+  position: absolute;
+  width: 220px;
+  z-index:1;
+  margin-top: 0;
+}
+.secContent {
+  margin: 1em 3em 2em 0;
+  padding: 1em 1em 0 2em;
+  margin-left: 240px;
+}
+
+.secondary .nav span {
+    background: url("../images/small_icons.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 3em;
+    left: 10px;
+    margin: auto;
+    position: absolute;
+    top: 10px;
+    width: 2em;
+}
+.secondary .nav .searchLogsLink span {
+    background-position: 3px 3px;
+}
+.secondary .nav .searchLogsLink:hover span {
+    background-position: 27px 3px;
+}
+.secondary .nav .searchLogsLink.selected span {
+    background-position: 27px 3px;
+}
+
+.secondary .nav .searchAlertsLink span {
+    background-position: 0px -55px;
+}
+.secondary .nav .searchAlertsLink:hover span {
+    background-position: 27px -55px;
+}
+.secondary .nav .searchAlertsLink.selected span {
+    background-position: 27px -55px;
+}
+
+.secondary .nav .viewRegistrationsLink  span {
+    background-position: 2px -113px;
+}
+.secondary .nav .viewRegistrationsLink:hover  span {
+    background-position: 27px -113px;
+}
+.secondary .nav .viewRegistrationsLink.selected  span {
+    background-position: 27px -113px;
+}
+
+.secondary .nav .searchNotificationGroupsLink   span {
+    background-position: 2px -176px;
+}
+.secondary .nav .searchNotificationGroupsLink:hover   span {
+    background-position: 27px -176px;
+}
+.secondary .nav .searchNotificationGroupsLink.selected   span {
+    background-position: 27px -176px;
+}
+
+.secondary .nav .searchNotificationRulesLink   span {
+    background-position: 1px -238px;
+}
+.secondary .nav .searchNotificationRulesLink:hover   span {
+    background-position: 27px -238px;
+}
+.secondary .nav .searchNotificationRulesLink.selected   span {
+    background-position: 27px -238px;
+}
+.secondary .nav h2 {
+  font-size: 1em;
+  margin-left: 4.5em;
+  text-align: left;
+  color:#333333;
+}
+.secondary .nav p  {display:none;}
+
+.secondary .nav li {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-bottom: 1px solid #B2B2B2;
+  color: #333333;
+  cursor: pointer;
+  min-height: 3.5em;
+  padding: 1em 0 0 4.5em;
+  position: relative;
+  font-weight: bold;
+}
+.secondary .nav li:after, .secondary .nav li:before { 
+top: 100%; 
+left: 75%; 
+border: solid transparent; 
+content: " "; 
+height: 0; 
+width: 0; 
+position: absolute; 
+pointer-events: none; 
+z-index: 100;
+} 
+.secondary .nav li:after { 
+border-color: rgba(255, 255, 255, 0); 
+border-top-color: #ffffff; 
+border-width: 15px; 
+margin-left: -15px; 
+} 
+.secondary .nav li:before { 
+border-color: rgba(178, 178, 178, 0); 
+border-top-color: #B2B2B2; 
+border-width: 16px; 
+margin-left: -16px; 
+}
+.secondary .nav li:hover:after, .secondary .nav li.selected:after { 
+border-color: transparent; 
+border-top-color: #00B5E2; 
+}
+.secondary .nav li:hover, .secondary .nav li.selected { 
+background-color:#00B5E2;
+color:#fff;
+}
+.secondary .nav li:last-child:before, .secondary .nav li:last-child:after {
+	border: none;
+}
+.secondary .manageTenants span {
+	background: url("../images/ManageTenantsSm.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.secondary .manageTenants:hover span, .secondary .manageTenants.selected span {
+	background: url("../images/ManageTenantsSm_over.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	}
+.secondary .manageComponents span {
+	background: url("../images/ManageComponentsSm.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.secondary .manageComponents:hover span, .secondary .manageComponents.selected span {
+	background: url("../images/ManageComponentsSm_over.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	}
+.secondary .configProperties span {
+	background: url("../images/ConfigPropertiesSm.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.secondary .configProperties:hover span, .secondary .configProperties.selected span {
+	background: url("../images/ConfigPropertiesSm_over.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	}
+.secondary .uploadBranding span {
+	background: url("../images/UploadBrandingSm.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.secondary .uploadBranding:hover span, .secondary .uploadBranding.selected span  {
+	background: url("../images/UploadBrandingSm_over.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+.secondary .configBranding span {
+	background: url("../images/ConfigBrandingSm.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.secondary .configBranding:hover span, .secondary .configBranding.selected span {
+	background: url("../images/ConfigBrandingSm_over.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	}
+.secondary .previewBranding span {
+	background: url("../images/PreviewBrandingSm.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	display: block;
+}
+.secondary .previewBranding:hover span, .secondary .previewBranding.selected span {
+	background: url("../images/PreviewBrandingSm_over.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	}
+	
+	
+.slider-arrow {
+  background: url("../images/menu_tab.png") no-repeat scroll -3px 5px #CCCCCC;
+  z-index:2;
+  color: #000000;
+  font: bold 1.3em Arial,Helvetica,sans-serif;
+  height: 4em;
+  left: /*-200px*/ 221px;
+  outline: 1px solid #999999;
+  padding: 5px;
+  position: absolute;
+  text-decoration: none;
+  top: 2em;
+  width: 10px;
+}
+/*end secondary page settings*/
+
+.footer {
+	background: url("../images/footer.png") repeat-y scroll right bottom #246A34;
+	height: 29px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index:1;
+}
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir {
+	display: block;
+	border: 0;
+	text-indent: -999em;
+	overflow: hidden;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
+}
+.ir br {
+	display: none;
+}
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+	visibility: hidden;
+}
+/* Contain floats: h5bp.com/q */ 
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+ 
+ @media print {
+* {
+	background: transparent !important;
+	color: black !important;
+	text-shadow: none !important;
+	filter: none !important;
+	-ms-filter: none !important;
+} /* Black prints faster: h5bp.com/s */
+a, a:visited {
+	text-decoration: underline;
+}
+a[href]:after {
+	content: " (" attr(href) ")";
+}
+abbr[title]:after {
+	content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+	content: "";
+}  /* Don't show links for images, or javascript/internal links */
+pre, blockquote {
+	border: 1px solid #999;
+	page-break-inside: avoid;
+}
+thead {
+	display: table-header-group;
+} /* h5bp.com/t */
+tr, img {
+	page-break-inside: avoid;
+}
+img {
+	max-width: 100% !important;
+}
+ @page {
+margin: 0.5cm;
+}
+p, h2, h3 {
+	orphans: 3;
+	widows: 3;
+}
+h2, h3 {
+	page-break-after: avoid;
+}
+}
+/* CSS Document */
+
+.homeBtn {
+width: 15em;
+background: #FFF;
+text-align: center;
+float: left;
+cursor: pointer;
+font: bold 1.2em/1.2 'Arial',sans-serif;
+list-style: none;
+padding: 1em 0;
+vertical-align: top;
+}
+.homeBtn:hover {
+background: #FFF;
+/*background:#00B5E2;
+color: #FFF;*/
+}
+.homeBtn.arrow {
+background: url("../images/arrow.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+}
+/*.homeBtn.arrow:hover {
+background: url("../images/arrow.png") no-repeat scroll right center #00B5E2;
+}*/
+.homeIcon {
+    background-image: url("../images/large_icons.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 55px;
+    margin: 2px;
+    padding: 0 !important;
+    vertical-align: middle;
+    width: 55px;
+}
+.homeBtn > p {
+  color: #000000;
+  font: 0.85em/1.2 'Arial',sans-serif;
+  padding: 0 1em;
+}
+.homeIcon.viewhLogs {
+    background-position: 9px 5px;
+}
+.homeIcon.viewAlerts {
+    background-position: 5px -160px;
+}
+.homeIcon.viewRegistrations {
+    background-position: 11px -79px;
+}
+.homeIcon.notificationGroups {
+    background-position: 6px -323px;
+}
+.homeIcon.notificationGroups:hover {
+    background-position: -83px -323px !important;
+}
+.homeIcon.notificationRules {
+    background-position: 7px -240px;
+}
+.line {
+    border: 2px solid #9C9EA1;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px -1px;
+    display: inline-block;
+    width: 54em;
+	margin-bottom: 4px;
+}

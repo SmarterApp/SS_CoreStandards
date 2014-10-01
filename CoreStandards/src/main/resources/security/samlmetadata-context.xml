@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+              http://www.springframework.org/schema/security 
+              http://www.springframework.org/schema/security/spring-security-3.2.xsd 
+              http://www.springframework.org/schema/context 
+              http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+       
+    <bean id="contextProvider" class="org.springframework.security.saml.context.SAMLContextProviderImpl">
+     
+    </bean>
+
+    
+        <bean id="metadataDelegate" class="org.springframework.security.saml.metadata.ExtendedMetadataDelegate">
+    <constructor-arg>
+        <bean class="org.opensaml.saml2.metadata.provider.FilesystemMetadataProvider">
+            <constructor-arg>
+                <value type="java.io.File">${corestandards.security.dir}/${corestandards.webapp.saml.metadata.filename}</value>
+            </constructor-arg>
+            <property name="parserPool" ref="parserPool"/>
+        </bean>
+    </constructor-arg>
+    <constructor-arg>
+        <bean class="org.springframework.security.saml.metadata.ExtendedMetadata">
+           <property name="local" value="true"/>
+           <property name="alias" value="${corestandards.security.saml.alias}"/>
+           <property name="securityProfile" value="metaiop"/>
+           <property name="sslSecurityProfile" value="pkix"/>
+           <property name="signingKey" value="${corestandards.security.saml.keystore.cert}" />
+			<property name="encryptionKey" value="${corestandards.security.saml.keystore.cert}" />
+           <property name="requireArtifactResolveSigned" value="false"/>
+           <property name="requireLogoutRequestSigned" value="false"/>
+           <property name="requireLogoutResponseSigned" value="false"/>
+           <property name="idpDiscoveryEnabled" value="false"/>
+        </bean>
+    </constructor-arg>
+</bean>
+    
+</beans>

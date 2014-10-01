@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT CSR (Publisher*, Subject*, Grade*)>
+<!ELEMENT Publisher (Publication*)>
+<!ELEMENT Subject EMPTY>
+<!ELEMENT Grade EMPTY>
+<!ELEMENT Publication (StandardCategories*, Standards*, SOCKs*, StandardGrades*, StandardRelationships*)>
+<!ELEMENT StandardCategories (Category*)>
+<!ELEMENT Category EMPTY>
+<!ELEMENT Standards (Standard*)>
+<!ELEMENT Standard EMPTY>
+<!ELEMENT SOCKs (SOCK*)>
+<!ELEMENT SOCK EMPTY>
+<!ELEMENT StandardGrades (StandardGrade*)>
+<!ELEMENT StandardGrade EMPTY>
+<!ELEMENT StandardRelationships (StandardRelationship*)>
+<!ELEMENT StandardRelationship EMPTY>
+
+
+<!ATTLIST Publisher Key CDATA #REQUIRED>
+<!ATTLIST Publisher Name CDATA #REQUIRED>
+
+<!ATTLIST Subject Key CDATA #REQUIRED>
+<!ATTLIST Subject Name CDATA #REQUIRED>
+<!ATTLIST Subject Code CDATA #REQUIRED>
+<!ATTLIST Subject Description CDATA #REQUIRED>
+
+<!ATTLIST Grade Key CDATA #REQUIRED>
+<!ATTLIST Grade Name CDATA #REQUIRED>
+
+<!ATTLIST Publication Key CDATA #REQUIRED>
+<!ATTLIST Publication Description CDATA #REQUIRED>
+<!ATTLIST Publication SubjectName CDATA #REQUIRED>
+<!ATTLIST Publication SubjectKey CDATA #IMPLIED>
+<!ATTLIST Publication Version CDATA #IMPLIED>
+<!ATTLIST Publication DateChanged CDATA #IMPLIED>
+<!ATTLIST Publication Status CDATA #IMPLIED>
+
+<!ATTLIST Category Name CDATA #REQUIRED>
+<!ATTLIST Category TreeLevel CDATA #REQUIRED>
+
+<!ATTLIST Standard Key CDATA #REQUIRED>
+<!ATTLIST Standard PubKey CDATA #REQUIRED>
+<!ATTLIST Standard ParentKey CDATA #REQUIRED>
+<!ATTLIST Standard Name CDATA #REQUIRED>
+<!ATTLIST Standard Description CDATA #REQUIRED>
+<!ATTLIST Standard TreeLevel CDATA #REQUIRED>
+<!ATTLIST Standard ShortName CDATA #IMPLIED>
+<!ATTLIST Standard GradeLevel CDATA #IMPLIED>
+
+<!ATTLIST SOCK Name CDATA #REQUIRED>
+<!ATTLIST SOCK Description CDATA #REQUIRED>
+
+<!ATTLIST StandardGrade Key CDATA #REQUIRED>
+<!ATTLIST StandardGrade GradeLevel CDATA #REQUIRED>
+
+<!ATTLIST StandardRelationship AKey CDATA #REQUIRED>
+<!ATTLIST StandardRelationship BKey CDATA #REQUIRED>
+<!ATTLIST StandardRelationship Type CDATA #REQUIRED>
+
+
+
+

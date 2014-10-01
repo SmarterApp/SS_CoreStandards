@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:sec="http://www.springframework.org/schema/security"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+	
+	<bean id="springApplicationContext" class="org.air.shared.utils.SpringApplicationContext" scope="singleton" lazy-init="false"/>
+	
+	<import resource="classpath:security/securityContext.xml"/>
+	<import resource="classpath:security/samlmetadata-context.xml"/> 
+	
+	<bean id="iUserInformation" class="org.air.standard.web.authentication.WebUserInformation" scope="prototype"/>
+	
+	<!-- c3p0 Datasource Configuration -->
+		<bean id="applicationDataSource" destroy-method="close"
+			  class="com.mchange.v2.c3p0.ComboPooledDataSource" >
+			    <property name="driverClass" value="${datasource.driverClassName:com.mysql.jdbc.Driver}"/>
+			    <property name="jdbcUrl" value="${datasource.url:jdbc:mysql://perm-db.dev.opentestsystem.org:3306/permissions_db}"/>
+			    <property name="user" value="${datasource.username:dbsbac}"/>
+			    <property name="password" value="${datasource.password:osTyMhRM1C}"/>
+			    <property name="minPoolSize" value="${datasource.minPoolSize:5}"/>
+		        <property name="acquireIncrement" value="${datasource.acquireIncrement:5}" />
+		        <property name="maxPoolSize" value="${datasource.maxPoolSize:20}" />
+		        <property name="checkoutTimeout" value="${datasource.checkoutTimeout:60000}" />
+		        <property name="preferredTestQuery" value="SELECT 1" />
+		        <property name="maxConnectionAge" value="${datasource.maxConnectionAge:0}"/>
+		        <property name="acquireRetryAttempts" value="${datasource.acquireRetryAttempts:5}"/>
+		</bean>
+		
+</beans>
