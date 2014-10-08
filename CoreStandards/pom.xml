@@ -6,7 +6,7 @@
   <artifactId>corestandards</artifactId>
   <name>corestandards</name>
   <packaging>war</packaging>
-  <version>R01.00.00</version>
+  <version>R01.00.01</version>
   <properties>
     <!-- project level properties -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -51,13 +51,6 @@
     </license>
   </licenses>
   
-  <repositories>
-		<repository>
-			<id>airdev-snapshots</id>
-			<name>airdev-snapshots</name>
-			<url>http://airdev.artifactoryonline.com/airdev/libs-snapshots-local</url>
-		</repository>
-	</repositories>
 
   <dependencies>
     <!-- MySQL connector: Required primarily for unit tests. Must be placed in Tomcat's lib directory -->
