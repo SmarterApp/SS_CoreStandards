@@ -1,5 +1,4 @@
 permission.uri=https://<permission-app-context-url>/rest
-corestandards.security.profile=dev
 component.name=CoreStandards
 corestandards.security.idp=https://<idp-url>
 datasource.url=jdbc:mysql://<database-url>/<default-schema>

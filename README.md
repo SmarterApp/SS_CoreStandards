@@ -1,4 +1,4 @@
-# CoreStandards
+# Welcome to the Core Standards Project
 
 CoreStandards enables users to create and upload various publications. It includes the following functionalities:
 
@@ -104,7 +104,6 @@ The following parameters need to be configured inside program management for MNA
 The following parameters need to be configured inside Program Management for SSO.	
 
 * `permission.uri=https://<permission-app-context-url>/rest` - The base URL of the REST API for the Permissions application.
-* `corestandards.security.profile=dev` - The name of the environment the application is running in. For a production deployment this will most likely be "prod." It must match the profile name used to name metadata files.
 * `component.name=CoreStandards` - The name of the component that this CoreStandards deployment represents. This must match the name of the component in Program Management and the name of the component in the Permissions application.
 * `corestandards.security.idp=https://<idp-url>` - The URL of the SAML-based identity provider (OpenAM).
 * `corestandards.webapp.saml.metadata.filename=corestandards_local_sp.xml` - Name of OpenAM SP (Service Provider) Metadata file which has been uploaded for the environment, as well as placed inside the server's filesystem. 
