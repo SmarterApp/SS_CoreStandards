@@ -6,7 +6,7 @@
   <artifactId>corestandards</artifactId>
   <name>corestandards</name>
   <packaging>war</packaging>
-  <version>R01.00.10</version>
+  <version>R01.00.11</version>
   <properties>
     <!-- project level properties -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
