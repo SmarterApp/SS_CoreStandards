@@ -6,7 +6,7 @@
   <artifactId>corestandards</artifactId>
   <name>corestandards</name>
   <packaging>war</packaging>
-  <version>R01.00.38</version>
+  <version>1.1.0-BUILD-SNAPSHOT</version>
   <properties>
     <!-- project level properties -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -37,9 +37,9 @@
     <org.apache.maven.plugins-compiler-version>2.5.1</org.apache.maven.plugins-compiler-version>
     <org.codehaus.mojo-build-helper-maven-version>1.7</org.codehaus.mojo-build-helper-maven-version>
     <org.codehaus.mojo-exec-maven-plugin-version>1.2.1</org.codehaus.mojo-exec-maven-plugin-version>
-    <sb11-mna-client.version>0.0.4</sb11-mna-client.version>
-	<sb11-shared-code.version>0.0.6</sb11-shared-code.version>
-	<progman-client.version>0.0.4</progman-client.version>
+    <sb11-mna-client.version>0.0.4-SNAPSHOT</sb11-mna-client.version>
+	<sb11-shared-code.version>0.0.6-SNAPSHOT</sb11-shared-code.version>
+	<progman-client.version>0.0.4-SNAPSHOT</progman-client.version>
   </properties>
 
   <licenses>
@@ -244,7 +244,7 @@
 	<dependency>
 		    <groupId>org.opentestsystem.shared</groupId>
 		    <artifactId>sb11-shared-security</artifactId>
-		    <version>0.0.1</version>
+		    <version>0.0.1-SNAPSHOT</version>
 	</dependency>
 	<!--Start: Build version info -->
 	<dependency>
