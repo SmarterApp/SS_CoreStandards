@@ -90,6 +90,9 @@ The following parameters need to be configured inside Program Management for dat
 * `datasource.checkoutTimeout=60000` - The number of milliseconds a client calling getConnection() will wait for a Connection to be checked in or acquired when the pool is exhausted. Zero means wait indefinitely. Setting any positive value will cause the getConnection() call to time out and break with an SQLException after the specified number of milliseconds.
 * `datasource.maxConnectionAge=0` - Seconds, effectively a time to live. A Connection older than maxConnectionAge will be destroyed and purged from the pool. This differs from maxIdleTime in that it refers to absolute age. Even a Connection which has not been idle will be purged from the pool if it exceeds maxConnectionAge. Zero means no maximum absolute age is enforced. 
 * `datasource.acquireRetryAttempts=5` - Defines how many times datasource will try to acquire a new Connection from the database before giving up. If this value is less than or equal to zero, datasource will keep trying to fetch a Connection indefinitely.
+* `datasource.idleConnectionTestPeriod=14400` - If this is a number greater than 0, connection pool manager will test all idle, pooled but unchecked-out connections, every this number of seconds
+* `datasource.testConnectionOnCheckout=false` - If true, an operation will be performed at every connection checkout to verify that the connection is valid. Default is false.
+* `datasource.testConnectionOnCheckin=false` - If true, an operation will be performed asynchronously at every connection checkin to verify that the connection is valid. Default is false.
 
 #### MNA (Monitoring and Alerting) properties
 The following parameters need to be configured inside program management for MNA.
