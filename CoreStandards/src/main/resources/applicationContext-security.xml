@@ -26,9 +26,13 @@
 		        <property name="acquireIncrement" value="${datasource.acquireIncrement:5}" />
 		        <property name="maxPoolSize" value="${datasource.maxPoolSize:20}" />
 		        <property name="checkoutTimeout" value="${datasource.checkoutTimeout:60000}" />
-		        <property name="preferredTestQuery" value="SELECT 1" />
+		        <!-- <property name="preferredTestQuery" value="SELECT 1" />  -->
 		        <property name="maxConnectionAge" value="${datasource.maxConnectionAge:0}"/>
 		        <property name="acquireRetryAttempts" value="${datasource.acquireRetryAttempts:5}"/>
+		        <property name="idleConnectionTestPeriod" value="${datasource.idleConnectionTestPeriod:300}"/>
+                <property name="testConnectionOnCheckout" value="${datasource.testConnectionOnCheckout:false}"/>
+                <property name="testConnectionOnCheckin" value="${datasource.testConnectionOnCheckin:false}"/>
+		        
 		</bean>
 		
 </beans>
